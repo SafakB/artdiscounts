@@ -1,0 +1,27 @@
+.cart-summary::after {
+  content: "";
+  display: block;
+  clear: both;
+  background-image: url("images/loading.gif");
+  background-position: center center;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-size: 50px;
+}
+
+.cart-summary.loading::after {
+  opacity: 1;
+}
+
+.cart-summary.loading .cart-detailed-totals {
+  visibility: hidden;
+}
