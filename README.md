@@ -1,8 +1,8 @@
-### Hi there <a href="https://www.artonomi.com/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
+### Hi there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%">
 
 ### ✨&nbsp; About Me
 
-Hello again, I'm Safak. I've been working with Artonomi since 2011. I'm a developer. I develop web, mobile, and sometimes robotic system software.
+Hello again, I'm Safak. I've been working with <a href="https://www.artonomi.com/">Artonomi</a> since 2011. I'm a developer. I develop web, mobile, and sometimes robotic system software.
 
 This module is designed to create simple discounts for use on e-commerce websites based on the Prestashop platform, based on a specific need.
 
