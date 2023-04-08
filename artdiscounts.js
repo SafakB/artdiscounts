@@ -21,25 +21,25 @@ prestashop.on('updatedCart', function (event) {
     discountApplied = false;
     return;
   }
-    // Send a request to the module's front controller to apply the discount
-    var applyDiscountUrl = prestashop.urls.base_url + 'module/artdiscounts/applydiscount';
+  // Send a request to the module's front controller to apply the discount
+  var applyDiscountUrl = prestashop.urls.base_url + 'module/artdiscounts/applydiscount';
 
-    $.post(applyDiscountUrl, { ajax: 1 }, function (data) {
-      /* json to object */
-      data = JSON.parse(data);
-      if (data.success) {
-        // If the discount was applied successfully, refresh the cart summary
-        console.log('Discount applied successfully');
-        discountApplied = true;
-        prestashop.emit('updateCart', { reason: { eventName: 'refresh-cart-summaryx' } });
-        setTimeout(() => {
-          $('.cart-summary').removeClass('loading'); // Hide the loading animation
-        }, 350);
-        // if (typeof getCart === 'function') {
-        //   getCart(); // Refresh cart summary directly
-        // } else {
-        //   console.error('getCart function is not defined'); // Debug log: check if the getCart function is available
-        // }
-      }
-    });
+  $.post(applyDiscountUrl, { ajax: 1 }, function (data) {
+    /* json to object */
+    data = JSON.parse(data);
+    if (data.success) {
+      // If the discount was applied successfully, refresh the cart summary
+      console.log('Discount applied successfully');
+      discountApplied = true;
+      prestashop.emit('updateCart', { reason: { eventName: 'refresh-cart-summaryx' } });
+      setTimeout(() => {
+        $('.cart-summary').removeClass('loading'); // Hide the loading animation
+      }, 350);
+      // if (typeof getCart === 'function') {
+      //   getCart(); // Refresh cart summary directly
+      // } else {
+      //   console.error('getCart function is not defined'); // Debug log: check if the getCart function is available
+      // }
+    }
+  });
 });

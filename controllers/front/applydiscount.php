@@ -26,17 +26,17 @@ class ArtDiscountsApplyDiscountModuleFrontController extends ModuleFrontControll
                 }
             }
 
-            $discountId = (int) Configuration::get('ART_DISCOUNTS_DISCOUNT_ID');
+            $discountId = (int) Configuration::get('ART_DISCOUNTS_DISCOUNT_ID_' . $cart->id);
             $cartRule = new CartRule($discountId);
 
             if (!Validate::isLoadedObject($cartRule)) {
                 $cartRule = new CartRule();
                 $cartRule->name = array_fill_keys(Language::getIDs(), '3 Al 2 Öde');
-                $cartRule->id_customer = $cart->id_customer;
+                //$cartRule->id_customer = $cart->id_customer;
                 $cartRule->date_from = date('Y-m-d H:i:s');
-                $cartRule->date_to = date('Y-m-d H:i:s', strtotime('+1 day'));
-                $cartRule->quantity = 1;
-                $cartRule->quantity_per_user = 1;
+                $cartRule->date_to = date('Y-m-d H:i:s', strtotime('+1 week'));
+                $cartRule->quantity = 9999;
+                $cartRule->quantity_per_user = 9999;
                 $cartRule->free_shipping = false;
                 $cartRule->reduction_percent = 0;
                 $cartRule->active = 1;
@@ -46,11 +46,11 @@ class ArtDiscountsApplyDiscountModuleFrontController extends ModuleFrontControll
             $cartRule->save();
 
 
-            $cart->removeCartRule((int) Configuration::get('ART_DISCOUNTS_DISCOUNT_ID'));
+            $cart->removeCartRule((int) Configuration::get('ART_DISCOUNTS_DISCOUNT_ID_' . $cart->id));
             $cart->addCartRule($cartRule->id);
-            Configuration::updateValue('ART_DISCOUNTS_DISCOUNT_ID', $cartRule->id);
+            Configuration::updateValue('ART_DISCOUNTS_DISCOUNT_ID_' . $cart->id, $cartRule->id);
         } else {
-            $cart->removeCartRule((int) Configuration::get('ART_DISCOUNTS_DISCOUNT_ID'));
+            $cart->removeCartRule((int) Configuration::get('ART_DISCOUNTS_DISCOUNT_ID_' . $cart->id));
         }
 
         // Return a JSON response
