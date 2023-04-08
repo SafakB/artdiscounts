@@ -6,7 +6,7 @@ Hello again, I'm Safak. I've been working with Artonomi since 2011. I'm a develo
 
 This module is designed to create simple discounts for use on e-commerce websites based on the Prestashop platform, based on a specific need.
 
-📕 &nbsp;**Bu modül ne yapar ?**
+📕 &nbsp;**What does this module do?**
 
 - 🔭 &nbsp;Checks the number of items in the cart :wink:
 - 🏷️ &nbsp;If the number of products in the cart is 3 or more, it applies a discount to the cart at the cheapest product price.
@@ -15,6 +15,7 @@ This module is designed to create simple discounts for use on e-commerce website
 - ⚡ &nbsp;Easy to install and configure.
 
 🔗 &nbsp;**Connect with me**
+
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/safakbahce) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/safakbahce) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/safakbahce) [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.tv/safakbahce) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/safakbahce) 
 
 
