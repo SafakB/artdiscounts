@@ -23,7 +23,7 @@ This module is designed to create simple discounts for use on e-commerce website
 ## Installation
 
 > **Warning**
-> Tested with Prestashop versions 1.7.
+> Tested with Prestashop versions 1.7 and in the default theme
 
 1. Download the latest release of the Art Discounts module from the GitHub repository.
 2. In your PrestaShop back-office, navigate to the "Modules" section.
